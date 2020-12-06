@@ -18,12 +18,12 @@ jobs:
         uses: actions/checkout@v2
       - name: begin git
         run: |
-          git config --local user.email "819464715@qq.com"
-          git config --local user.name "tanruixiang"
+          git config --global user.email "819464715@qq.com"
+          git config --global user.name "tanruixiang"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull 
           nowtime=$( date )
           nowtime>>autocomitlist
           git add autocommitlist
-          git commit -m " ${nowtime} "
+          git commit -m " do it! "
           git push
