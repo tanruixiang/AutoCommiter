@@ -23,6 +23,7 @@ jobs:
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull 
           nowtime=$(date)
-          echo ${nowtime}>>autocomitlist
-          git commit -am " auto commiter "
+          echo ${nowtime}>>autocommitlist
+          git add autocommitlist
+          git commit -m " auto commiter "
           git push
