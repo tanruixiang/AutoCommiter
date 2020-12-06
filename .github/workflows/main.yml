@@ -1,12 +1,12 @@
-# This is a basic workflow to help you get started with Actions
 name: Commiter
+
 on:
   workflow_dispatch:
     branches:
-      - main
+    - main
   push:
     branches: 
-      - main
+    - main
   schedule:
     - cron: '* * * * *'
 
