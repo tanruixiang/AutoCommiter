@@ -8,10 +8,11 @@ jobs:
   autocommit:
     runs-on: ubuntu-latest
     steps: 
-      - name: start to commit
-      - uses: actions/checkout@v2
-      - shell: bash
-      - run: |
+    - name: start to commit
+      uses: actions/checkout@v2
+    - name: git it
+      shell: bash
+      run: |
           git config --local user.email "819464715@qq.com"
           git config --local user.name "tanruixiang"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
