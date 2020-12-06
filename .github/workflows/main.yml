@@ -25,5 +25,5 @@ jobs:
           nowtime=$(date)
           echo ${nowtime}>>autocommitlist
           git add autocommitlist
-          git commit -m " auto commiter "
+          git commit -m " ${nowtime} "
           git push
