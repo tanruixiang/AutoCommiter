@@ -16,8 +16,7 @@ jobs:
     steps: 
       - name: start to commit
         uses: actions/checkout@v2
-      - name: git it
-        shell: bash
+      - name: begin git
         run: |
           git config --local user.email "819464715@qq.com"
           git config --local user.name "tanruixiang"
